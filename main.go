@@ -28,4 +28,10 @@ func main() {
 	var numTwo int8 = -128
 	var numThree uint8 = 255
 	fmt.Println(numOne, numTwo, numThree)
+
+	// Float
+	var scoreOne float32 = -1.1221
+	var scoreTwo float64 = 213123213123123123123123123123123211.12
+	scoreThree := 12121211
+	fmt.Println(scoreOne, scoreTwo, scoreThree)
 }
