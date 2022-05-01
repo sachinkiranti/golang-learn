@@ -2,36 +2,28 @@ package main
 
 import "fmt"
 
-var someName = "Hello"
-
 func main() {
-	// String
-	var nameOne string = "sachin"
-	// fmt.Println(nameOne)
-	var nameTwo = 5
-	var nameThree string
+	age := 28
+	name := "Sachin Rai"
 
-	nameOne = "Changed"
-	nameThree = "Declared"
+	// Print
+	fmt.Print("Hello, ")
+	fmt.Print("World! \n")
+	fmt.Print("New Line \n")
 
-	nameFour := "Kumar" // Short hand version and won't work outside the method
+	// Println
+	fmt.Println("Hello Sachin!")
+	fmt.Println("Bye Sachin!")
 
-	fmt.Println(nameOne, nameTwo, nameThree, nameFour, someName)
+	fmt.Println("My name is", name, "and my age is", age)
 
-	// Integer
-	var intOne int = 5
-	intTwo := 10
-	fmt.Println(intOne, intTwo)
+	// Printf (formatted strings) %_ = format specifier [v,q,T,0.1f: decimal point]
+	fmt.Printf("My name is %v and my age is %v \n", name, age)
+	fmt.Printf("My name is %q and my age is %q \n", name, age)
+	fmt.Printf("age is of type %T \n", age)
+	fmt.Printf("you scored %0.1f points! \n", 255.55)
 
-	// Bits & Memory
-	var numOne int8 = 20
-	var numTwo int8 = -128
-	var numThree uint8 = 255
-	fmt.Println(numOne, numTwo, numThree)
-
-	// Float
-	var scoreOne float32 = -1.1221
-	var scoreTwo float64 = 213123213123123123123123123123123211.12
-	scoreThree := 12121211
-	fmt.Println(scoreOne, scoreTwo, scoreThree)
+	// Sprintf (save formatted strings)
+	var str = fmt.Sprintf("My name is %v and my age is %v \n", name, age)
+	fmt.Println("The saved string is:", str)
 }
