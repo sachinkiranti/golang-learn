@@ -3,27 +3,40 @@ package main
 import "fmt"
 
 func main() {
-	age := 28
-	name := "Sachin Rai"
 
-	// Print
-	fmt.Print("Hello, ")
-	fmt.Print("World! \n")
-	fmt.Print("New Line \n")
+	// Array
+	var ages [3]int = [3]int{20, 22, 28}
+	var nums = [5]int{20, 22, 28, 32, 50}
+	names := [4]string{
+		"sachin",
+		"kiranti",
+		"uman",
+		"kirant",
+	}
 
-	// Println
-	fmt.Println("Hello Sachin!")
-	fmt.Println("Bye Sachin!")
+	names[1] = "Kiranti Changed"
 
-	fmt.Println("My name is", name, "and my age is", age)
+	fmt.Println(ages, nums, len(nums), names)
 
-	// Printf (formatted strings) %_ = format specifier [v,q,T,0.1f: decimal point]
-	fmt.Printf("My name is %v and my age is %v \n", name, age)
-	fmt.Printf("My name is %q and my age is %q \n", name, age)
-	fmt.Printf("age is of type %T \n", age)
-	fmt.Printf("you scored %0.1f points! \n", 255.55)
+	// Slices (use array under the hood)
+	var scores = []int{
+		100,
+		140,
+		160,
+	}
 
-	// Sprintf (save formatted strings)
-	var str = fmt.Sprintf("My name is %v and my age is %v \n", name, age)
-	fmt.Println("The saved string is:", str)
+	scores[0] = 101
+	scores = append(scores, 180)
+
+	fmt.Println(scores, len(scores))
+
+	// Slice ranges
+	rangeOne := names[1:3]
+	rangeTwo := names[2:]
+	rangeThree := names[:3]
+	fmt.Println(rangeOne, rangeTwo, rangeThree)
+
+	rangeOne = append(rangeOne, "mula")
+	fmt.Println(rangeOne, len(rangeOne))
+
 }
